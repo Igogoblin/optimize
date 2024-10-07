@@ -1,0 +1,74 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "korzinka.uz",
+      "image": "./assets/img/korzinka.png",
+      "text": "В четверг скидки на рыбу",
+      "cashback": 3,
+      "description": "Супермаркеты",
+      "date": "",
+      "group": "eat"
+    },
+    {
+      "id": 2,
+      "name": "MANGO",
+      "image": "./assets/img/mango.png",
+      "text": "Акция 1+1",
+      "cashback": 3,
+      "description": "Магазины брендовой одежды",
+      "date": "",
+      "group": "shop"
+    },
+    {
+      "id": 3,
+      "name": "TEXNOMART",
+      "image": "./assets/img/texnomart.png",
+      "text": "До — 60% на бытовую технику в ТЦ «Samarkand Darvoza»",
+      "cashback": 3,
+      "description": "Магазины электроники и бытовой техники",
+      "date": "",
+      "group": "telecom"
+    },
+    {
+      "id": 4,
+      "name": "Makro",
+      "image": "./assets/img/marko.png",
+      "text": "При покупке CIF пачка губок Salixan БЕСПЛАТНО",
+      "cashback": 3,
+      "description": "Супермаркеты",
+      "date": "",
+      "group": "shop"
+    },
+    {
+      "id": 5,
+      "name": "Gosty",
+      "image": "./assets/img/gosty.png",
+      "text": "Каждый вторник — 20% на все меню",
+      "cashback": 3,
+      "description": "Рестораны",
+      "date": "До 29 февраля",
+      "group": "eat"
+    },
+    {
+      "id": 6,
+      "name": "Gosty",
+      "image": "./assets/img/shosh.png",
+      "text": "Скидки на еду и напитки",
+      "cashback": 3,
+      "description": "Кафе",
+      "date": "71:59:59",
+      "group": "eat"
+    },
+    {
+      "id": 7,
+      "name": "Petrovich",
+      "image": "./assets/img/petrovig.png",
+      "text": "Ланч по выгодной цене и 2% кешбэк по промокоду",
+      "cashback": 3,
+      "description": "Рестораны",
+      "date": "До 29 февраля",
+      "group": "eat"
+    }
+  ]
+}
