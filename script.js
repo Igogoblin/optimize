@@ -13,6 +13,7 @@ fetch("data.json")
     };
 
     buildPlace(ourData, 3, salesContainer);
+    showFaqCompany();
   })
   .catch((error) => {
     console.error("Ошибка загрузки:", error);
@@ -135,3 +136,14 @@ velcomShowNext.addEventListener("click", () => {
   velcomNext.style.display = "block";
   velcomShowNext.style.display = "none";
 });
+
+const faqCompany = document.querySelector(".faq_company");
+function showFaqCompany() {
+  console.log(data);
+  data.brands.forEach((element) => {
+    const company = document.createElement("span");
+    console.log(element.name);
+    company.innerText = ` ${element.name} `;
+    faqCompany.appendChild(company);
+  });
+}
