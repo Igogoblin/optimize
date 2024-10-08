@@ -3,7 +3,7 @@ fetch("data.json")
   .then((response) => response.json())
   .then((fetchData) => {
     data = fetchData;
-    console.log(data);
+
     buildPlace(data, 4, aside);
     asideAllBlock.textContent = data.brands.length;
     ourData = {
@@ -11,7 +11,7 @@ fetch("data.json")
         return element.date ? element : "";
       }),
     };
-    console.log(ourData);
+
     buildPlace(ourData, 3, salesContainer);
   })
   .catch((error) => {
@@ -96,7 +96,6 @@ salesEatIndicator.style.backgroundColor = "var(--color-red)";
 
 sales.forEach((sale) => {
   sale.addEventListener("click", () => {
-    console.log(data);
     if (sale.dataset.id === "eat") {
       salesEatIndicator.style.backgroundColor = "var(--color-red)";
       salesTelecomIndicator.style.backgroundColor = "var(--color-back)";
