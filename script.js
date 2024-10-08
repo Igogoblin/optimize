@@ -20,6 +20,7 @@ fetch("data.json")
 
 const aside = document.querySelector(".aside_block");
 const asideAllBlock = document.querySelector(".aside_all-number");
+
 function buildBlock(data, index) {
   const cards = [];
   const limit = Math.min(index, data.brands.length);
@@ -69,6 +70,7 @@ function buildPlace(data, index, place) {
     place.appendChild(element);
   });
 }
+
 function asideHeight() {
   const aside = document.querySelector(".aside_block");
   const asideBlock = document.querySelector("aside");
@@ -76,6 +78,7 @@ function asideHeight() {
   aside.style.height = height + "px";
   asideBlock.style.height = height + "px";
 }
+
 const showAll = document.querySelector(".show-all");
 const showAllButton = document.querySelector("aside .header_sale__decoration");
 
@@ -84,6 +87,7 @@ showAll.addEventListener("click", () => {
   showAllButton.style.display = "none";
   buildPlace(data, data.brands.length, aside);
 });
+
 // for main ------------------------------------
 const salesEatIndicator = document.querySelector(".sales_eat__indicator");
 const salesTelecomIndicator = document.querySelector(
@@ -114,6 +118,7 @@ sales.forEach((sale) => {
     }
   });
 });
+
 function filterData(param) {
   const arr = [];
   data.brands.forEach((element) => {
