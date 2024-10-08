@@ -33,50 +33,45 @@
             <div class="header_sale">
                 <button class="header_sale__button">Добавить скидку</button>
                 <div class="header_sale__decoration">
-                    <img src="./assets/svg/Ellipse.svg" alt="Ellipse">
+                    <img src="./assets/svg/Ellipse.svg" alt="Ellipse" class="buttomn-decor">
+                    <img src="./assets/svg/arrow-right.svg" alt="active" class="button-decoration">
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="container">
+        <div class=" container">
             <aside>
                 <h2>Скидки дня</h2>
-                <span class="aside_text">23 предложения</span>
+                <span class="aside_text"><span class="aside_all-number">23</span> предложения</span>
                 <div class="aside_block">
-                    <!-- <div class="card">
-                        <img src="./assets/img/korzinka.png" alt="korzinka" class="card_img">
-                        <span class="card_brand">Korzinka.uz</span>
-                        <span class="card_name">В четверг скидки на рыбу</span>
-                        <div class="card_sale">
-                            <span class="card_sale_text">Скидки</span>
-                            <div class="card_sale__cashback-container">
-                                <div class="card_sale__cashback">Кешбэк</div>
-                                <div class="card_sale__cashback-percent">3%</div>
-                            </div>
-                        </div>
-                        <span class="card_subtitle">Супермаркеты</span>
-                    </div> -->
+
                 </div>
                 <div class="header_sale">
                     <button class="header_sale__button show-all">Показать все</button>
                     <div class="header_sale__decoration">
                         <img src="./assets/svg/Ellipse.svg" alt="Ellipse">
+                        <img src="./assets/svg/arrow-right.svg" alt="active" class="button-decoration">
                     </div>
                 </div>
             </aside>
             <div class="wrapper">
                 <div class="main">
 
-                    <!-- <div class="sales"></div> -->
                     <div class="sales_header">
                         <h1>Топовые скидки</h1>
                     </div>
                     <div class="sales_head">
-                        <div class="sales_eat">Питание</div>
-                        <div class="sales_telecom">Связь</div>
-                        <div class="sales_shop">Магазины</div>
+                        <div class="sales_eat sales" data-id="eat"><span>Питание</span>
+                            <div class="sales_eat__indicator"></div>
+                        </div>
+                        <div class="sales_telecom sales" data-id="telecom"><span>Связь</span>
+                            <div class="sales_telecom__indicator"></div>
+                        </div>
+                        <div class="sales_shop sales" data-id="shop"><span>Магазины</span>
+                            <div class="sales_shop__indicator"></div>
+                        </div>
                     </div>
                     <div class="sales_container"></div>
                     <div class="sales_pagination">
@@ -97,12 +92,63 @@
                     <p class="velcome__text">Мы собрали для вас все самые выгодные предложения, чтобы вы могли
                         сэкономить свои деньги
                         и получить максимум удовольствия от покупок.</p>
-                    <span>Развернуть текст</span>
+                    <p class="velcome__text velcome__next">Следите за обновлениями, чтобы не пропустить самые свежие
+                        предложения и
+                        специальные акции. Делитесь своими находками с друзьями и вместе наслаждайтесь выгодными
+                        покупками!</p>
+                    <span class="velcome__show-next">Развернуть текст</span>
 
                 </div>
                 <div class="faq">
                     <h3 class="faq__title">FAQ</h3>
-                    <p class="faq__subtitle">Какие компании представлены на сайте?</p>
+                    <p class="faq__text">Какие компании представлены на сайте?</p>
+
+                    <section class="block">
+                        <label for="bread" class="bl">
+                            <div class="h">
+                                <div class="head">
+                                    <label class="descrip">Как я могу быть в курсе новых скидок и акций
+                                        на сайте?</label>
+                                </div>
+                                <div class="button">
+                                    <div class="open"><img src="./assets/svg/faq.svg" alt="icon plus" class="op"></div>
+                                </div>
+                            </div>
+                            <input id="bread" type="radio" name="cssBayan" checked />
+                            <div class="image">
+                                <p> Чтобы быть в курсе новых скидок и акций на сайте, вы можете подписаться
+                                    на наш <span>телеграм-канал</span> или следить за новостями.</p>
+                                <p>
+                                    Мы регулярно отправляем информацию о новых предложениях и акциях нашим подписчикам,
+                                    чтобы они всегда могли быть в курсе последних скидок и эксклюзивных предложений.
+                                </p>
+                                <p>
+                                    Также можно регулярно посещать сайт и проверять разделы с акциями и скидками
+                                </p>
+
+                            </div>
+                        </label>
+
+                        <label for="tree" class="bl">
+                            <div class="h">
+                                <div class="head">
+                                    <label class="descrip">Могу ли я поделиться найденными скидками и акциями
+                                        с друзьями?</label>
+                                </div>
+                                <div class="button">
+                                    <div class="open"><img src="./assets/svg/faq.svg" alt="icon plus" class="op"></div>
+                                </div>
+                            </div>
+                            <input type="radio" id="tree" name="cssBayan" />
+                            <div class="image">
+                                <p>
+                                    Да, вы можете делиться найденными скидками и акциями с друзьями. Это отличный способ
+                                    помочь им сэкономить и сделать покупки более приятными!
+                                </p>
+                            </div>
+                        </label>
+
+                    </section>
                 </div>
             </div>
 
