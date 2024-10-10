@@ -29,6 +29,9 @@ function buildBlock(data, index) {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    const brand = data.brands[i];
+    const initialDate = brand.date ? parseTimeString(brand.date) : null;
+
     card.innerHTML = `
     <img src=${data.brands[i].image} alt=${
       data.brands[i].name
@@ -37,7 +40,9 @@ function buildBlock(data, index) {
       data.brands[i].date
         ? `<span class="card_date 
         ${
-          data.brands[i].description === "Рестораны" ? "card_sale__active" : ""
+          data.brands[i].description === "Рестораны"
+            ? "card_sale__active"
+            : "sale_fast"
         }"
         >${data.brands[i].date}</span>`
         : ""
@@ -57,7 +62,9 @@ function buildBlock(data, index) {
     <span class="card_subtitle">${data.brands[i].description}</span>
     </div>
     `;
-
+    if (initialDate) {
+      startCountdown(`sale_fast`, initialDate);
+    }
     cards.push(card);
   }
   return cards;
@@ -148,4 +155,27 @@ function showFaqCompany() {
     company.innerText = ` ${element.name} `;
     faqCompany.appendChild(company);
   });
+}
+// for time in action card ---------------------------------
+function parseTimeString(date) {
+  const [hours, minutes, seconds] = date.split(":").map(Number);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+function formatTime(seconds) {
+  const hours = String(Math.floor(seconds / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+  const secondsLeft = String(seconds % 60).padStart(2, "0");
+  return `${hours}:${minutes}:${secondsLeft}`;
+}
+
+function startCountdown(id, date) {
+  let time = date;
+  const interval = setInterval(() => {
+    if (date <= 0) {
+      clearInterval(interval);
+    } else {
+      time--;
+      document.querySelector(`.${id}`).innerHTML = formatTime(time);
+    }
+  }, 1000);
 }
