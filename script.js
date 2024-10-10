@@ -35,7 +35,11 @@ function buildBlock(data, index) {
     } class="card_img">
     ${
       data.brands[i].date
-        ? `<span class="card_date">${data.brands[i].date}</span>`
+        ? `<span class="card_date 
+        ${
+          data.brands[i].description === "Рестораны" ? "card_sale__active" : ""
+        }"
+        >${data.brands[i].date}</span>`
         : ""
     }
     <div class="card_info">
