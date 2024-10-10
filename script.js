@@ -62,7 +62,7 @@ function buildBlock(data, index) {
     <span class="card_subtitle">${data.brands[i].description}</span>
     </div>
     `;
-    if (initialDate) {
+    if (initialDate && forDate === 0) {
       startCountdown(`sale_fast`, initialDate);
     }
     cards.push(card);
@@ -157,6 +157,7 @@ function showFaqCompany() {
   });
 }
 // for time in action card ---------------------------------
+let forDate = 0;
 function parseTimeString(date) {
   const [hours, minutes, seconds] = date.split(":").map(Number);
   return hours * 3600 + minutes * 60 + seconds;
@@ -170,6 +171,7 @@ function formatTime(seconds) {
 
 function startCountdown(id, date) {
   let time = date;
+  forDate = 1;
   const interval = setInterval(() => {
     if (date <= 0) {
       clearInterval(interval);
