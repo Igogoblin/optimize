@@ -278,7 +278,15 @@ aside h2 {
   font-size: 14px;
   line-height: 19.6px;
 }
-
+.card_brand:hover,
+.card_sale_text:hover {
+  cursor: pointer;
+  color: var(--color-red);
+}
+.card_name:hover {
+  cursor: pointer;
+  color: var(--color-gr);
+}
 .card_sale__cashback-container {
   display: flex;
 }
